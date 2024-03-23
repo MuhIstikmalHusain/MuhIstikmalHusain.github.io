@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+header {
+  width: 100%;
+  height: 100vh;
+  background: url(landing-page.jpg);
+  background-size: cover;
+  font-family: sans-serif;
+}
+nav {
+  width: 90%;
+  height: 100px;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 25px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+}
+.landing-page {
+  position: absolute;
+  top: 20%;
+  left: 28%;
+  max-width: 650px;
+  text-align: center;
+}
+.landing-page span {
+  letter-spacing: 5px;
+}
+.landing-page h1 {
+  font-size: 2.5em;
+}
+.content {
+  height: 400px;
+  width: 750px;
+  overflow: hidden;
+  position: relative;
+}
+.content .images {
+  height: 100%;
+  width: 100%;
+}
+.images img {
+  height: 100%;
+  width: 100%;
+}
+.btm-slider {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  display: flex;
+  transform: translateX(-50%);
+}
+
+.btm-slider span {
+  height: 20px;
+  width: 60px;
+  border: 2px solid white;
+  margin: 0 4px;
+  cursor: pointer;
+}
+.btm-slider span:hover {
+  background: white;
+}
+.content .slide {
+  font-size: 40px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 50px;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.content .slide:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.content .left {
+  left: 0;
+}
+.content .right {
+  right: 0;
+}

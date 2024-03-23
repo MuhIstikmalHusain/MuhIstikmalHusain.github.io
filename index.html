@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index HTML</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Tugas 3 Sinauo</div>
+        <div class="menu">
+          <a href="#">Index</a>
+          <a href="form/form.html">Form</a>
+          <a href="jsdasar/jsdasar.html">Js Dasar</a>
+          <a href="./T4 Landing Dom/Landing-dom.html">Landing Dom</a>
+          <a href="./T5 API/productapi.html">Produck</a>
+        </div>
+        <div class="kiri">Registrasi</div>
+      </nav>
+      <div class="landing-page">
+        <span>Carousel Landing Page</span>
+        <h1>Press The Image</h1>
+        <!-- Carousel Start -->
+        <div class="content">
+          <div class="images">
+            <a href="#"><img src="html.jpg" alt="Carousel1" /></a>
+            <a href="form/form.html"><img src="css.jpg" alt="Carousel2" /></a>
+            <a href="jsdasar/jsdasar.html"
+              ><img src="javascript.jpg" alt="Carousel3"
+            /></a>
+          </div>
+          <button onclick="side_slide(-1)" class="slide left">&#8656;</button>
+          <button onclick="side_slide(1)" class="slide right">&#8658;</button>
+          <!-- <div class="slide left">
+            <i class="fas fa-angle-left"></span>
+          </div>
+          <div class="slide right">
+            <i class="fas fa-angle-right"></span>
+          </div> -->
+          <div class="btm-slider">
+            <span onclick="btm_slide(1)"></span>
+            <span onclick="btm_slide(2)"></span>
+            <span onclick="btm_slide(3)"></span>
+          </div>
+        </div>
+        <!-- Carousel End -->
+      </div>
+
+      <script>
+        var indexValue = 1;
+        shomImg(indexValue);
+        function btm_slide(e) {
+          shomImg((indexValue = e));
+        }
+        function side_slide(e) {
+          shomImg((indexValue += e));
+        }
+        function shomImg(e) {
+          var i;
+          const img = document.querySelectorAll("img");
+          const sliders = document.querySelectorAll(".btm-slider span");
+          if (e > img.length) {
+            indexValue = 1;
+          }
+          if (e < 1) {
+            indexValue = img.length;
+          }
+          for (i = 0; i < img.length; i++) {
+            img[i].style.display = "none";
+          }
+          for (i = 0; i < img.length; i++) {
+            sliders[i].style.background = "rgba(255, 255, 255, 0.1)";
+          }
+          img[indexValue - 1].style.display = "block";
+          sliders[indexValue - 1].style.background = "white";
+        }
+      </script>
+    </header>
+  </body>
+</html>
