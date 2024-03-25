@@ -112,8 +112,9 @@ fetch(endpoint)
                     <p>
                     ${element.deskripsi.substring(0, 90)}
                     </p>
-                    <a href="#" class="btn">Beli Produk</a>
+                    
                 </div>
+                <div class="btn"><a href="#" class="btn">Beli Produk</a></div?
                 </div>
             ` + konten.innerHTML;
     });
