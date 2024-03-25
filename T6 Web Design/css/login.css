@@ -106,3 +106,70 @@ form {
 .registrasi p a:hover {
   text-decoration: underline;
 }
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 500px;
+  }
+  .container h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .form {
+    width: 200px;
+    height: auto;
+    border-radius: 20px;
+    padding: 80px 40px;
+  }
+}
+
+/* CSS for mobile phones */
+@media only screen and (max-width: 570px) {
+  .container {
+    width: 400px;
+    height: 400px;
+  }
+  .container h1 {
+    font-size: 20px;
+    align-items: center;
+  }
+  .input-box {
+    margin-bottom: 10px;
+  }
+  .remember-forgot {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  form {
+    width: 400px;
+    height: 300px;
+    padding: 50px 40px;
+  }
+  .container .input-box {
+    width: 320px;
+    height: 30px;
+  }
+  .input-box input {
+    width: 320px;
+    height: 30px;
+    padding: 10px;
+    font-size: 18px;
+  }
+  .container .btn {
+    width: 320px;
+    height: 30px;
+    background: #fff;
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+  }
+  .remember-forgot .checkbox {
+    width: 10px;
+  }
+  .registrasi p,
+  a,
+  label {
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
