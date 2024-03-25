@@ -13,7 +13,7 @@ body {
 header {
   width: 100%;
   height: 100vh;
-  background: url(landing-page.jpg);
+  background: url(/asset/landing-page.jpg);
   background-size: cover;
   font-family: sans-serif;
 }
